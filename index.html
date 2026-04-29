@@ -3,14 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Physical Function Study Sign-Up</title>
+  <title>Berea College Research Study Sign-Up</title>
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      background: linear-gradient(135deg, #0f172a, #1e3a5f);
-      color: #1f2937;
+      background:
+        radial-gradient(circle at top left, rgba(250, 204, 21, 0.30), transparent 30%),
+        linear-gradient(135deg, #111827, #1e3a5f 55%, #0f172a);
+      color: #111827;
     }
 
     .page {
@@ -18,52 +24,108 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 40px 20px;
+      padding: 42px 18px;
     }
 
     .card {
-      max-width: 850px;
       width: 100%;
+      max-width: 880px;
       background: #ffffff;
-      border-radius: 24px;
+      border-radius: 28px;
       overflow: hidden;
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+      box-shadow: 0 25px 80px rgba(0, 0, 0, 0.35);
     }
 
-    .header {
-      background: linear-gradient(135deg, #facc15, #f97316);
-      padding: 42px 34px;
+    .hero {
+      background: linear-gradient(135deg, #facc15, #fb923c);
+      padding: 48px 34px 40px;
       text-align: center;
-      color: #111827;
     }
 
-    .header h1 {
-      margin: 0;
-      font-size: 42px;
-      line-height: 1.05;
-      font-weight: 900;
-      letter-spacing: -1px;
-    }
-
-    .header h2 {
-      margin: 12px 0 0;
-      font-size: 24px;
+    .badge {
+      display: inline-block;
+      background: rgba(17, 24, 39, 0.95);
+      color: #ffffff;
+      padding: 9px 16px;
+      border-radius: 999px;
+      font-size: 14px;
       font-weight: 800;
+      letter-spacing: 0.4px;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 46px;
+      line-height: 1.03;
+      letter-spacing: -1.5px;
+      font-weight: 900;
+    }
+
+    .hero-subtitle {
+      margin: 16px auto 0;
+      max-width: 680px;
+      font-size: 21px;
+      line-height: 1.4;
+      font-weight: 700;
     }
 
     .content {
-      padding: 36px;
+      padding: 38px;
     }
 
-    .tag {
-      display: inline-block;
-      background: #111827;
-      color: white;
-      padding: 8px 14px;
-      border-radius: 999px;
-      font-weight: 700;
-      font-size: 14px;
-      margin-bottom: 18px;
+    .intro {
+      font-size: 18px;
+      line-height: 1.65;
+      margin-top: 0;
+    }
+
+    .money-box {
+      background: #fff7d6;
+      border-left: 7px solid #f97316;
+      border-radius: 18px;
+      padding: 22px 24px;
+      margin: 28px 0;
+      box-shadow: 0 10px 25px rgba(249, 115, 22, 0.12);
+    }
+
+    .money {
+      margin: 0;
+      font-size: 34px;
+      line-height: 1.1;
+      font-weight: 900;
+      color: #9a3412;
+    }
+
+    .money-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 16px;
+      margin: 28px 0;
+    }
+
+    .mini-card {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      padding: 18px;
+      border-radius: 18px;
+      font-size: 16px;
+      font-weight: 800;
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+    }
+
+    .section-title {
+      margin-top: 32px;
+      margin-bottom: 10px;
+      font-size: 25px;
+      font-weight: 900;
+      letter-spacing: -0.3px;
     }
 
     p {
@@ -71,87 +133,78 @@
       line-height: 1.6;
     }
 
-    .highlight-box {
-      background: #f8fafc;
-      border-left: 6px solid #f97316;
-      padding: 18px 20px;
-      border-radius: 12px;
-      margin: 24px 0;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 16px;
-      margin: 24px 0;
-    }
-
-    .mini-card {
-      background: #f1f5f9;
-      padding: 18px;
-      border-radius: 16px;
-      font-size: 16px;
-      font-weight: 700;
-    }
-
     .privacy {
       background: #ecfdf5;
       border: 1px solid #bbf7d0;
-      padding: 18px 20px;
-      border-radius: 16px;
-      margin: 24px 0;
+      padding: 20px 22px;
+      border-radius: 18px;
+      margin: 28px 0;
     }
 
     .privacy strong {
       color: #166534;
     }
 
+    .privacy p {
+      margin: 8px 0;
+    }
+
     form {
       margin-top: 28px;
       background: #f9fafb;
-      padding: 26px;
-      border-radius: 18px;
       border: 1px solid #e5e7eb;
+      border-radius: 22px;
+      padding: 28px;
     }
 
     label {
       display: block;
-      margin-top: 16px;
-      margin-bottom: 6px;
-      font-weight: 800;
+      margin-top: 18px;
+      margin-bottom: 7px;
       font-size: 15px;
+      font-weight: 900;
     }
 
-    input, textarea {
+    input,
+    textarea {
       width: 100%;
-      box-sizing: border-box;
-      padding: 14px;
-      border-radius: 12px;
+      padding: 15px;
       border: 1px solid #cbd5e1;
+      border-radius: 14px;
       font-size: 16px;
       font-family: Arial, Helvetica, sans-serif;
+      background: #ffffff;
+    }
+
+    input:focus,
+    textarea:focus {
+      outline: none;
+      border-color: #f97316;
+      box-shadow: 0 0 0 4px rgba(249, 115, 22, 0.15);
     }
 
     textarea {
-      min-height: 90px;
+      min-height: 95px;
       resize: vertical;
     }
 
     button {
       width: 100%;
-      margin-top: 24px;
-      padding: 16px;
+      margin-top: 26px;
+      padding: 17px;
       border: none;
-      border-radius: 14px;
-      background: #111827;
+      border-radius: 16px;
+      background: linear-gradient(135deg, #111827, #374151);
       color: white;
       font-size: 19px;
       font-weight: 900;
       cursor: pointer;
+      letter-spacing: 0.2px;
     }
 
     button:hover {
-      background: #374151;
+      transform: translateY(-1px);
+      box-shadow: 0 10px 20px rgba(17, 24, 39, 0.22);
     }
 
     .small {
@@ -162,84 +215,83 @@
 
     .footer {
       text-align: center;
-      padding: 24px;
+      padding: 24px 30px;
       background: #f1f5f9;
       font-size: 15px;
       color: #374151;
     }
 
-    .money {
-      font-size: 28px;
-      font-weight: 900;
-      color: #b45309;
+    .footer strong {
+      color: #111827;
     }
 
-    @media (max-width: 600px) {
-      .header h1 {
-        font-size: 32px;
+    @media (max-width: 650px) {
+      h1 {
+        font-size: 34px;
       }
 
-      .header h2 {
-        font-size: 20px;
+      .hero-subtitle {
+        font-size: 18px;
       }
 
       .content {
-        padding: 24px;
+        padding: 26px;
+      }
+
+      .money {
+        font-size: 28px;
       }
     }
   </style>
 </head>
 
 <body>
-  <div class="page">
-    <div class="card">
+  <main class="page">
+    <section class="card">
 
-      <div class="header">
-        <h1>Join Our Research Study</h1>
-        <h2>Physical Function & Academic Experience</h2>
-      </div>
+      <header class="hero">
+        <div class="badge">Berea College Research Study</div>
+        <h1>Get Paid to Participate in Research</h1>
+        <p class="hero-subtitle">
+          Help us study how physical function, daily effort, and academic life connect.
+        </p>
+      </header>
 
-      <div class="content">
-        <div class="tag">Berea College Research Study</div>
-
-<div class="highlight-box">
-
-            <div class="mini-card">Ever wondered if your physical energy affects your academic life?</div>
-        <div>
-        <p>
-          We are recruiting Berea College students for a study examining how
-          physical movement, effort, stress, and daily demands may relate to
-          students’ academic experiences.
+      <section class="content">
+        <p class="intro">
+          We are recruiting Berea College students for a study examining how movement,
+          perceived effort, stress, and daily demands may relate to students’ academic experiences.
         </p>
 
-        <div class="highlight-box">
-          <p class="money">Earn a $30 gift card</p>
+        <div class="money-box">
+          <p class="money">$30 Gift Card</p>
           <p>
-            Participants will complete one study session lasting approximately
-            <strong>40–50 minutes</strong>.
+            Complete one study session lasting about <strong>40–50 minutes</strong>.
           </p>
         </div>
 
+        <h2 class="section-title">What You’ll Do</h2>
+
         <div class="grid">
-          <div class="mini-card">Simple movement tasks</div>
-          <div class="mini-card">Short questionnaires</div>
-          <div class="mini-card">Non-invasive measurements</div>
-          <div class="mini-card">No fitness experience required</div>
+          <div class="mini-card">✔ Simple movement tasks</div>
+          <div class="mini-card">✔ Short questionnaires</div>
+          <div class="mini-card">✔ Quick, non-invasive measurements</div>
+          <div class="mini-card">✔ No fitness experience required</div>
         </div>
 
         <div class="privacy">
+          <p><strong>Your privacy matters.</strong></p>
           <p>
-            <strong>Your privacy matters.</strong> This sign-up form only collects
-            your contact information so the research team can follow up with you.
-            Your information will not be shared.
+            This interest form only collects your contact information so the research team
+            can follow up with you about scheduling.
           </p>
           <p>
-            If academic data are included later, the Registrar’s Office handles
-            the secure matching process. Researchers receive de-identified data only.
+            If academic data are included later, the Registrar’s Office handles the secure
+            matching process. Researchers receive de-identified data only.
           </p>
         </div>
 
-        <h2>Sign Up to Participate</h2>
+        <h2 class="section-title">Sign Up to Be Contacted</h2>
 
         <form action="https://formspree.io/f/xkoywonq" method="POST">
           <label for="name">Full Name *</label>
@@ -267,14 +319,14 @@
             the research team contact you with more information.
           </p>
         </form>
-      </div>
+      </section>
 
-      <div class="footer">
+      <footer class="footer">
         Questions? Contact <strong>Dr. Nabila Rahman Biju</strong> at
         <strong>bijun@berea.edu</strong>
-      </div>
+      </footer>
 
-    </div>
-  </div>
+    </section>
+  </main>
 </body>
 </html>
