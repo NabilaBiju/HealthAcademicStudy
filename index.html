@@ -1,27 +1,276 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Study Sign-Up</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Physical Function Study Sign-Up</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(135deg, #0f172a, #1e3a5f);
+      color: #1f2937;
+    }
+
+    .page {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    .card {
+      max-width: 850px;
+      width: 100%;
+      background: #ffffff;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+    }
+
+    .header {
+      background: linear-gradient(135deg, #facc15, #f97316);
+      padding: 42px 34px;
+      text-align: center;
+      color: #111827;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 42px;
+      line-height: 1.05;
+      font-weight: 900;
+      letter-spacing: -1px;
+    }
+
+    .header h2 {
+      margin: 12px 0 0;
+      font-size: 24px;
+      font-weight: 800;
+    }
+
+    .content {
+      padding: 36px;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #111827;
+      color: white;
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 14px;
+      margin-bottom: 18px;
+    }
+
+    p {
+      font-size: 17px;
+      line-height: 1.6;
+    }
+
+    .highlight-box {
+      background: #f8fafc;
+      border-left: 6px solid #f97316;
+      padding: 18px 20px;
+      border-radius: 12px;
+      margin: 24px 0;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin: 24px 0;
+    }
+
+    .mini-card {
+      background: #f1f5f9;
+      padding: 18px;
+      border-radius: 16px;
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    .privacy {
+      background: #ecfdf5;
+      border: 1px solid #bbf7d0;
+      padding: 18px 20px;
+      border-radius: 16px;
+      margin: 24px 0;
+    }
+
+    .privacy strong {
+      color: #166534;
+    }
+
+    form {
+      margin-top: 28px;
+      background: #f9fafb;
+      padding: 26px;
+      border-radius: 18px;
+      border: 1px solid #e5e7eb;
+    }
+
+    label {
+      display: block;
+      margin-top: 16px;
+      margin-bottom: 6px;
+      font-weight: 800;
+      font-size: 15px;
+    }
+
+    input, textarea {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 14px;
+      border-radius: 12px;
+      border: 1px solid #cbd5e1;
+      font-size: 16px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    textarea {
+      min-height: 90px;
+      resize: vertical;
+    }
+
+    button {
+      width: 100%;
+      margin-top: 24px;
+      padding: 16px;
+      border: none;
+      border-radius: 14px;
+      background: #111827;
+      color: white;
+      font-size: 19px;
+      font-weight: 900;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #374151;
+    }
+
+    .small {
+      font-size: 14px;
+      color: #4b5563;
+      margin-top: 12px;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 24px;
+      background: #f1f5f9;
+      font-size: 15px;
+      color: #374151;
+    }
+
+    .money {
+      font-size: 28px;
+      font-weight: 900;
+      color: #b45309;
+    }
+
+    @media (max-width: 600px) {
+      .header h1 {
+        font-size: 32px;
+      }
+
+      .header h2 {
+        font-size: 20px;
+      }
+
+      .content {
+        padding: 24px;
+      }
+    }
+  </style>
 </head>
+
 <body>
+  <div class="page">
+    <div class="card">
 
-<h2>Sign Up for Study</h2>
-<p>Enter your details and we’ll contact you.</p>
+      <div class="header">
+        <h1>Join Our Research Study</h1>
+        <h2>Physical Function & Academic Experience</h2>
+      </div>
 
-<form action="https://formspree.io/f/xkoywonq" method="POST">
-  
-  <label>Name:</label><br>
-  <input type="text" name="name" required><br><br>
+      <div class="content">
+        <div class="tag">Berea College Research Study</div>
 
-  <label>Phone Number:</label><br>
-  <input type="tel" name="phone" required><br><br>
+        <p>
+          We are recruiting Berea College students for a study examining how
+          physical movement, effort, stress, and daily demands may relate to
+          students’ academic experiences.
+        </p>
 
-  <label>Email (optional):</label><br>
-  <input type="email" name="email"><br><br>
+        <div class="highlight-box">
+          <p class="money">Earn a $30 gift card</p>
+          <p>
+            Participants will complete one study session lasting approximately
+            <strong>40–50 minutes</strong>.
+          </p>
+        </div>
 
-  <button type="submit">Submit</button>
+        <div class="grid">
+          <div class="mini-card">Simple movement tasks</div>
+          <div class="mini-card">Short questionnaires</div>
+          <div class="mini-card">Non-invasive measurements</div>
+          <div class="mini-card">No fitness experience required</div>
+        </div>
 
-</form>
+        <div class="privacy">
+          <p>
+            <strong>Your privacy matters.</strong> This sign-up form only collects
+            your contact information so the research team can follow up with you.
+            Your information will not be shared.
+          </p>
+          <p>
+            If academic data are included later, the Registrar’s Office handles
+            the secure matching process. Researchers receive de-identified data only.
+          </p>
+        </div>
 
+        <h2>Sign Up to Participate</h2>
+
+        <form action="https://formspree.io/f/xkoywonq" method="POST">
+          <label for="name">Full Name *</label>
+          <input type="text" id="name" name="Full Name" required />
+
+          <label for="email">Berea Email *</label>
+          <input type="email" id="email" name="Berea Email" required />
+
+          <label for="phone">Phone Number *</label>
+          <input type="tel" id="phone" name="Phone Number" required />
+
+          <label for="availability">General Availability</label>
+          <textarea
+            id="availability"
+            name="General Availability"
+            placeholder="Example: weekday mornings, May term afternoons, evenings, etc."
+          ></textarea>
+
+          <input type="hidden" name="_subject" value="New Research Study Sign-Up" />
+
+          <button type="submit">Submit Interest Form</button>
+
+          <p class="small">
+            Submitting this form does not enroll you in the study. It only lets
+            the research team contact you with more information.
+          </p>
+        </form>
+      </div>
+
+      <div class="footer">
+        Questions? Contact <strong>Dr. Nabila Rahman Biju</strong> at
+        <strong>bijun@berea.edu</strong>
+      </div>
+
+    </div>
+  </div>
 </body>
 </html>
